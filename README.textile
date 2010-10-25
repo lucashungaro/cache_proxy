@@ -2,11 +2,11 @@ h1. cache_proxy
 
 A mixin that provides better encapsulation and control when using cache in Rails
 
-Does cache-proxy helps your daily work with Rails? So, "please recommend me":http://workingwithrails.com/recommendation/new/person/9370-lucas-h-ngaro and "Nando Vieira":http://workingwithrails.com/person/7846-nando-vieira on Working With Rails. Thanks for your kindness! :)
+Does cache_proxy helps your daily work with Rails? So, "please recommend me":http://workingwithrails.com/recommendation/new/person/9370-lucas-h-ngaro and "Nando Vieira":http://workingwithrails.com/recommendation/new/person/7846-nando-vieira on Working With Rails. Thanks for your kindness! :)
 
 h2. Why?
 
-Using the default Rails abstration for caching will scatter calls to Rails.cache all over your code. Also, it isn't trivial to bypass the cache when you need to - most of the time you end up creating two versions of the "same" method: one cached and one uncached. Using cache-proxy you will encapsulate the access to the cache and will be able to bypass the cached result using a hash option.
+Using the default Rails abstration for caching will scatter calls to Rails.cache all over your code. Also, it isn't trivial to bypass the cache when you need to - most of the time you end up creating two versions of the "same" method: one cached and one uncached. Using cache_proxy you will encapsulate the access to the cache and will be able to bypass the cached result using a hash option.
 
 h2. How?
 
