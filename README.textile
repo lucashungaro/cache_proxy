@@ -1,0 +1,69 @@
+h1. cache-proxy
+
+A mixin that provides better encapsulation and control when using cache in Rails
+
+Does cache-proxy helps your daily work with Rails? So, "please recommend me in Work With Rails":http://workingwithrails.com/recommendation/new/person/9370-lucas-h-ngaro and thanks for your kindness! :)
+
+h2. Why?
+
+Using the default Rails abstration for caching will scatter calls to Rails.cache all over your code. Also, it isn't trivial to bypass the cache when you need to - most of the time you end up creating two versions of the "same" method: one cached and one uncached. Using cache-proxy you will encapsulate the access to the cache and will be able to bypass the cached result using a hash option.
+
+h2. How?
+
+First, install the gem:
+
+<pre>
+$ [sudo] gem install cache-proxy
+</pre>
+
+Then, add it as a dependency in your code using your favorite way (a simple require or mechanisms like the Bundler gem).
+
+The gem will provide you a module to mixin into the classes the access the cache. For example:
+
+<pre>
+class User < ActiveRecord::Base
+  include CacheProxy
+
+  has_many :search_terms, :dependent => :destroy, :order => "term ASC"
+
+  def saved_search_terms
+    cache_proxy("my_cache_key") do
+      self.search_terms
+    end
+  end
+end
+</pre>
+
+The cache_proxy method gives you the possibility of passing in two options:
+
+<pre>
+	# this will bypass the cache and hit the storage, default is true
+    cache_proxy("my_cache_key", :cached => false) do
+      self.search_terms
+    end
+
+	# time to live, default is 30.days
+    cache_proxy("my_other_cache_key", :cache_expires_in => 2.hours) do
+      self.expensive_canculations
+    end
+</pre>
+
+And... that's it! You can use it both in class and instance methods.
+
+h2. Note on Patches/Pull Requests
+
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+h2. Contributors
+
+This library was implemented in conjuction with "Nando Vieira":http://simplesideias.com.br/, a really great programmer and friend.
+
+h3. Copyright
+
+Copyright (c) 2010 Lucas Húngaro. See LICENSE for details.
