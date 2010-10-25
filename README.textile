@@ -2,7 +2,7 @@ h1. cache_proxy
 
 A mixin that provides better encapsulation and control when using cache in Rails
 
-Does cache-proxy helps your daily work with Rails? So, "please recommend me in Work With Rails":http://workingwithrails.com/recommendation/new/person/9370-lucas-h-ngaro and thanks for your kindness! :)
+Does cache-proxy helps your daily work with Rails? So, "please recommend me":http://workingwithrails.com/recommendation/new/person/9370-lucas-h-ngaro and "Nando Vieira":http://workingwithrails.com/person/7846-nando-vieira on Working With Rails. Thanks for your kindness! :)
 
 h2. Why?
 
