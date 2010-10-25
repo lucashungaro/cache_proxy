@@ -1,4 +1,4 @@
-h1. cache-proxy
+h1. cache_proxy
 
 A mixin that provides better encapsulation and control when using cache in Rails
 
