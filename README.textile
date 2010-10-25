@@ -13,7 +13,7 @@ h2. How?
 First, install the gem:
 
 <pre>
-$ [sudo] gem install cache-proxy
+$ [sudo] gem install cache_proxy
 </pre>
 
 Then, add it as a dependency in your code using your favorite way (a simple require or mechanisms like the Bundler gem).
