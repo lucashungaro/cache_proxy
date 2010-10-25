@@ -62,7 +62,7 @@ h2. Note on Patches/Pull Requests
 
 h2. Contributors
 
-This library was implemented in conjuction with "Nando Vieira":http://simplesideias.com.br/, a really great programmer and friend.
+This library was implemented in conjunction with "Nando Vieira":http://simplesideias.com.br/, a really great programmer and friend.
 
 h3. Copyright
 
