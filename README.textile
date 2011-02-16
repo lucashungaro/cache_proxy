@@ -64,6 +64,6 @@ h2. Contributors
 
 This library was implemented in conjunction with "Nando Vieira":http://simplesideias.com.br/, a really great programmer and friend.
 
-h3. Copyright
+h3. License
 
-Copyright (c) 2010 Lucas Húngaro. See LICENSE for details.
+cache_proxy is released under the MIT license. See "MIT LICENSE":https://github.com/lucashungaro/cache_proxy/blob/master/MIT-LICENSE.
